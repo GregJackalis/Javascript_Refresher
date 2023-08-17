@@ -1,7 +1,6 @@
-const { log } = require('console');
 const { exit } = require('process');
 const readline = require('readline');
-const { json } = require('stream/consumers');
+
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -55,7 +54,7 @@ var collectionCopy = JSON.parse(JSON.stringify(collection))
 function updateRecords () {
     let found = false;
     var id, attr, value;    
-    
+
     rl.question("Write down the id of the record: ", function(answer) {
         id = answer
     
