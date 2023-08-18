@@ -46,20 +46,24 @@ function lookupInfo(name, attr) {
                 rl.question("Type in the title of the info you want to see for " + name + ": ", function(answer2) {
                     let modifiedValue = answer2.toLowerCase();
                     attr = modifiedValue
-                    if (person.hasOwnProperty(attr)) {
-                        console.log(person[attr])
-                    } else {
-                        console.log("We do not have this field of information for " + name)
-                    }
-                    exit()
+                    // if (person.hasOwnProperty(attr)) {
+                    //     console.log(person[attr])
+                    // } else {
+                    //     console.log("We do not have this field of information for " + name)
+                    // }
+
+                    person.hasOwnProperty(attr) ? (console.log(person[attr]), exit()) : console.log("We do not have this field of information for " + name);
+                    
                 });
             }
         }
 
-        if (found === false) {
-            console.log("Person with the name " + name + " was not found in our contacts")
-            exit()
-        }
+        found === false ? (console.log("Person with the name " + name + " was not found in our contacts"), exit()) : null;
+
+        // if (found === false) {
+        //     console.log("Person with the name " + name + " was not found in our contacts")
+        //     exit()
+        // }
     });
 }
 
