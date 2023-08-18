@@ -67,26 +67,34 @@ function updateRecords () {
                 value = answer
 
                     for (var Record_Id in collection) {
-                        if (Record_Id == id) {
-                            var item = collection[id]
-                            item[attr] = value
-                            found = true;
-                        }
+                        // if (Record_Id == id) {
+                        //     var item = collection[id]
+                        //     item[attr] = value
+                        //     found = true;
+                        // }
+
+                        var item;
+
+                        Record_Id == id ? (item = collection[id], item[attr] = value, found = true) : null;
 
 
-                        if (found === true) {
-                            console.log("\n\nFor Record with id: " + id)
-                            console.log("Artist: " + collection[id].artist)
-                            console.log("Album: " + collection[id].album)
-                            console.log("Tracks:\n" + collection[id].tracks)
-                            exit()
-                        }
+                        // if (found === true) {
+                        //     console.log("\n\nFor Record with id: " + id)
+                        //     console.log("Artist: " + collection[id].artist)
+                        //     console.log("Album: " + collection[id].album)
+                        //     console.log("Tracks:\n" + collection[id].tracks)
+                        //     exit()
+                        // }
+
+                        found === true ? (console.log("\n\nFor Record with id: " + id), console.log("Artist: " + collection[id].artist), console.log("Album: " + collection[id].album), console.log("Tracks:\n" + collection[id].tracks), exit()) : null
                     }
 
-                    if (found === false) {
-                        console.log("Record with the id " + id + " was not found.")
-                        exit()
-                    }
+                    // if (found === false) {
+                    //     console.log("Record with the id " + id + " was not found.")
+                    //     exit()
+                    // }
+
+                    found === false ? (console.log("Record with the id " + id + " was not found."), exit()) : null
                 });
             });
         });
