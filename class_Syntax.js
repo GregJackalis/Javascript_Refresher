@@ -43,11 +43,3 @@ const carrot = new Vegetable('carrot'); /* by using the variable that the new cl
                                             Vegetable that has a property 'name' which its value is
                                             "carrot" */
 console.log(carrot.name);
-
-
-            //    ||
-            //    ||
-            //    ||
-            //    ||
-            //   \  /
-            //    \/
