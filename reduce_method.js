@@ -48,6 +48,7 @@ items.forEach(item => {
  //   \  /
  //    \/
 
+  
 const totalPriceReduce = items.reduce((total, item) => {
     console.log(`Total: ${total}`)
     console.log(`Item: ${item.price} \n`)
