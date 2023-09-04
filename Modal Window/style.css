@@ -194,3 +194,21 @@
     font-size: xx-large;
     font-weight: bold;
   }
+
+  .contactButtons {
+    margin-top: 25px;
+  }
+
+  #BtnSendMessage, #BtnClear {
+    font-size: large;
+    margin: 10px;
+    width: 170px;
+    height: 40px;
+    border-radius: 13px;
+  }
+
+  #BtnSendMessage:hover, #BtnClear:hover {
+    color: black;
+    background-color: gray;
+    border: 5px inset green;
+  }
