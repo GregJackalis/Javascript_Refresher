@@ -175,9 +175,18 @@
     z-index: 5;
   }
 
-  #emailHeading, #passwordHeading {
+  #emailHeading, #passwordHeading, #passwordHeadingLogin, #emailHeadingLogin {
     font-size: x-large;
     margin-bottom: 7px;
+  }
+
+  .emailInput-Container_Login {
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .passwordInput-Container_Login {
+    margin-bottom: 8px;
   }
 
   #signUp_Message, #login_Message {
