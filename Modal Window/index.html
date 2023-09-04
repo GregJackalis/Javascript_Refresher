@@ -72,27 +72,25 @@
 
     <!-- Modal Window for Contact Us -->
     <div class="modal hidden" id="thirdWindow">
-      <button class="close-modal">&times;</button>
-      <h1 class="modalHeading">Contact Us</h1>
+      <button class="close-modal" id="closeContact">&times;</button>
+      <h1 class="modalHeading">Contact Us 📇</h1>
 
-      <div class="upperPart">
-        <div class="emailInput-Container_Login">
-          <h2 id="emailHeadingLogin">Name</h2>
-          <input type="text" id="emailInput">
+        <div class="nameContainer">
+          <h2 id="nameHeader_Contact">Name</h2>
+          <input type="text" id="nameInput">
         </div>
-        <div class="passwordInput-Container_Login">
-          <h2 id="passwordHeadingLogin">Email</h2>
-          <input type="email" id="passwordInput">
+        <div class="emailContainer">
+          <h2 id="emailHeader_Contact">Email</h2>
+          <input type="email" id="emailInputContact">
         </div>
-      </div>
 
-      <div class="passwordInput-Container_Login">
-        <h2 id="passwordHeadingLogin">Message</h2>
-        <input type="text" id="passwordInput">
+      <div class="messageContainer">
+        <h2 id="messageHeader_Contact">Message</h2>
+        <textarea name="message" id="messageInput" cols="10" rows="6"></textarea>   
       </div>
 
       <div class="contactButtons">
-        <button id="BtnSendMessage">Send Message</button>
+        <button id="BtnSendMessage"> <a href="mailto:gregorytsak3@gmail.com"></a>Send Message</button>
         <button id="BtnClear">Clear</button>
       </div>
     </div>

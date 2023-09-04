@@ -11,6 +11,11 @@ const BtnLogIn = document.querySelector('#BtnLogin')
 
 const BtnShowContact = document.querySelector('#emailUs')
 
+const BtnClearFields = document.querySelector('#BtnClear')
+// input fields (to clear)
+const nameInput = document.querySelector('#nameInput')
+const emailInputContact = document.querySelector('#emailInputContact')
+const messageInput = document.querySelector('#messageInput')
 
 const firstWindow = document.querySelector('#firstWindow')
 const secondWindow = document.querySelector('#secondWindow')
@@ -65,6 +70,13 @@ BtnShowContact.addEventListener('click', () => {
     thirdWindow.style.display = 'block';
     overlayDisplay.style.display = 'block';
 })
+
+BtnClearFields.addEventListener('click', () => {
+    nameInput.value = ""
+    emailInputContact.value = ""
+    messageInput.value = ""
+})
+
 
 document.addEventListener('keydown', (e) => { 
 
