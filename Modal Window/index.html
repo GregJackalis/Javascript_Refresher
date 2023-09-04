@@ -10,11 +10,12 @@
   <body>
     <div class="container">
     <h1> <span class="mainHeading">Website Service</span> </h1>
-      <button class="show-modal" id="login">Sign Up</button>
-      <button class="show-modal" id="signUp">Login</button>
+      <button class="show-modal" id="signUp">Sign Up</button>
+      <button class="show-modal" id="login">Login</button>
       <button class="show-modal" id="emailUs">Email Us</button>
     </div>
 
+    <!-- Modal Window For Sing Up -->
     <div class="modal hidden" id="firstWindow">
       
       <div class="insideContainer">
@@ -34,10 +35,38 @@
       
     </div>
 
-    <div class="modal hidden" id="messageModal">
+    <!-- Modal Window For Sign Up Message -->
+    <div class="modal hidden" id="signUpMessage">
       <button class="close-modal">&times;</button>
 
-      <p id="signUp_Message">Thank you for signing up! <br> Check your Email 😁</p>
+      <p id="signUp_Message">Thank you for signing up! <br> Please check your email inbox 😁</p>
+    </div>
+
+    <!-- Modal Window For Sign In Message -->
+    <div class="modal hidden" id="secondWindow">
+      
+      <div class="insideContainer">
+        <button class="close-modal">&times;</button>
+ 
+        <h1 class="modalHeading">Sign In 💼</h1>
+        <div class="emailInput-Container">
+          <h2 id="emailHeading">Email:</h2>
+          <input type="email" id="emailInput">
+        </div>
+        <div class="passwordInput-Container">
+          <h2 id="passwordHeading">Password (1 - 16 characters):</h2>
+          <input type="password" id="passwordInput">
+        </div>
+        <button id="BtnLogin">Login</button>
+      </div>
+      
+    </div>
+
+    <!-- Modal Window For Login Message -->
+    <div class="modal hidden" id="loginMessage">
+      <button class="close-modal">&times;</button>
+
+      <p id="login_Message">Welcome back, Greg! <br>It's good to see you again! 😌</p>
     </div>
 
     <div class="overlay hidden"></div>

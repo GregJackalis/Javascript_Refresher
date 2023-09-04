@@ -1,13 +1,19 @@
 "use strict";
 
 //buttons
-const BtnShowModal = document.querySelectorAll('.show-modal')
 const BtnCloseModal = document.querySelectorAll('.close-modal')
+
 const BtnSignUp = document.querySelector('#BtnSignUp')
+const BtnShowSignUp = document.querySelector('#signUp')
+
+const BtnShowLogin = document.querySelector('#login')
+const BtnLogIn = document.querySelector('#BtnLogin')
 
 
-const hiddenModal = document.querySelector('.modal.hidden')
-const hiddenMessage = document.querySelector('#messageModal')
+const firstWindow = document.querySelector('#firstWindow')
+const secondWindow = document.querySelector('#secondWindow')
+const signUpMessage = document.querySelector('#signUpMessage')
+const loginMessage = document.querySelector('#loginMessage')
 const overlayDisplay = document.querySelector('.overlay.hidden')
 
 // fields
@@ -16,43 +22,44 @@ const passwordInput = document.querySelector('#passwordInput')
 
 // function to close modal
 const closeModal = function () {
-    hiddenModal.style.display = 'none';
+    firstWindow.style.display = 'none';
+    secondWindow.style.display = 'none';
     overlayDisplay.style.display = 'none';
-    hiddenMessage.style.display = 'none';
+    signUpMessage.style.display = 'none';
+    loginMessage.style.display = 'none';
     emailInput.value = '';
     passwordInput.value = '';
 }
 
-// to open modal
-Array.from(BtnShowModal).forEach(element => {
-    element.addEventListener('click', () => {
-        hiddenModal.style.display = 'block'; 
-        overlayDisplay.style.display = 'block';
-    })
-}); {
-}
+BtnShowSignUp.addEventListener('click', () => {
+    firstWindow.style.display = 'block'; 
+    overlayDisplay.style.display = 'block';
+})
 
 Array.from(BtnCloseModal).forEach(element => {
-    element.addEventListener('click', () => {
-        hiddenModal.style.display = 'none';
-        overlayDisplay.style.display = 'none';
-        hiddenMessage.style.display = 'none';
-        emailInput.value = '';
-        passwordInput.value = '';
-    })
+    element.addEventListener('click', closeModal)
 })
 
 overlayDisplay.addEventListener('click', closeModal)
 
 BtnSignUp.addEventListener('click', () => {
-    hiddenMessage.style.display = 'block';
+    signUpMessage.style.display = 'block';
     emailInput.value = '';
     passwordInput.value = '';
 })
 
+BtnShowLogin.addEventListener('click', () => {
+    secondWindow.style.display = 'block';
+    overlayDisplay.style.display = 'block';
+})
+
+BtnLogIn.addEventListener('click', () => {
+    loginMessage.style.display = 'block';
+})
+
 document.addEventListener('keydown', (e) => { 
 
-     if (e.key ==='Escape' && hiddenModal.style.display == 'none') { 
+     if (e.key ==='Escape' && firstWindow.style.display == 'none') { 
         alert("Modal is already closed")
      } else if (e.key === 'Escape') closeModal();
 })
