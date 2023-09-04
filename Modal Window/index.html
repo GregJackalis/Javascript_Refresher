@@ -8,23 +8,45 @@
     <title>Modal window</title>
   </head>
   <body>
-    <button class="show-modal">Show modal 1</button>
-    <button class="show-modal">Show modal 2</button>
-    <button class="show-modal">Show modal 3</button>
+    <div class="container">
+    <h1> <span class="mainHeading">Website Service</span> </h1>
+      <button class="show-modal" id="login">Sign Up</button>
+      <button class="show-modal" id="signUp">Login</button>
+      <button class="show-modal" id="emailUs">Email Us</button>
+    </div>
 
     <div class="modal hidden" id="firstWindow">
-      <button class="close-modal">&times;</button>
-      <h1>I'm a modal window 😍</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <!-- <-- <h1 class="modalHeading">Sign Up 📝</h1>
+      <h2 id="emailHeading">Email</h2>
+      <input type="email" name="emailInput" id="emailInput">
+      <h2 id="passwordHeading">Password</h2>
+      <input type="text" name="passwordInput" id="emailInput">
+
+      <button id="BtnSignUp">Sign Up</button> -->
+      
+      <div class="insideContainer">
+        <button class="close-modal">&times;</button>
+ 
+        <h1 class="modalHeading">Sign Up 📝</h1>
+        <div class="emailInput-Container">
+          <h2 id="emailHeading">Email:</h2>
+          <input type="email" id="emailInput">
+        </div>
+        <div class="passwordInput-Container">
+          <h2 id="passwordHeading">Password (1 - 16 characters):</h2>
+          <input type="password" id="passwordInput">
+        </div>
+        <button id="BtnSignUp">Sign Up</button>
+      </div>
+      
     </div>
+
+    <div class="modal hidden" id="messageModal">
+      <button class="close-modal">&times;</button>
+
+      <p id="signUp_Message">Thank you for signing up! <br> Check your Email 😁</p>
+    </div>
+
     <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
