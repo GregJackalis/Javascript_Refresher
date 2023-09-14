@@ -85,7 +85,14 @@ console.log(guests1);
 
 
 // WITH OR OPERATORS, the same thing but with less code
-const guestsOR = restaurant.numGuests || 10; // it prints 10 because the restaurant object doesn't have a "numGuests" property, so after checking that the restaurant.numGuests is un-truthy, it then goes to the next one and sees that it's truthy so it returns that (aka the 10, the default value given). Keep in mind, that if restaurants.numGuests = 10; then it would return 10. On the next lecture the solution to this.
+const guestsOR = restaurant.numGuests || 10; 
+/*  it prints 10 because the restaurant object doesn't have a "numGuests" property, so after checking
+    that the restaurant.numGuests is un-truthy, it then goes to the next one and sees that it's
+    truthy so it returns that (aka the 10, the default value given). 
+    
+    - Keep in mind, that if restaurants.numGuests = 10; then it would return 10. The solution to this
+    would be the nullish coalescing operator ==> check nullish_coalescing.js code in the topics folder
+*/
 // console.log(guestsOR);
 
 
