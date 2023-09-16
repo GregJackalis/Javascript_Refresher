@@ -43,7 +43,7 @@ for (const item of menu) console.log(item);
 
 // BUT, this for-of loop method was made so that the index part is "taken out" and only the current value is returned/given to us. So when it comes to getting an index with the for-of loop, it's a bit "of a pain"
 for (const item of menu.entries()) {
-    // console.log(item);
+    console.log(item);
     // console.log(`Position: ${item[0]}, Value: ${item[1]}`);
     const [index, value] = [...item];                   // DESTRUCTURING can be also used to easily declare variables for each element, instead of the line above
     console.log(`Position: ${index}, Value: ${value}`);
