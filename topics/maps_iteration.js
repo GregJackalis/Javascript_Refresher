@@ -88,6 +88,8 @@ for (const [key, value] of question) { // it's just like iterating over objects,
     typeof key === 'number' ? console.log(`Answer ${key}: ${value}`) : null; // using the typeof command to check if the data type of the key passed in is number, then print the answer 
 }
 
+
+// Checking the prompt and returning a reply to whether the user's answer is correct or not
 const answer = parseInt(prompt('Your answer: '));
 
 answer === question.get('correct') ? console.log(question.get(true)) : console.log(question.get(false));
