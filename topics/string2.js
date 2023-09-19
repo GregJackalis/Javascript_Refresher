@@ -18,7 +18,7 @@ const loginEmail = '   Hello@Greg.Com  \n' // let's say this is what the user in
 const lowerEmail = loginEmail.toLowerCase();
 const trimmedEmail = lowerEmail.trim(); // the trim method gets rid of spaces and /n (enter value) at the START and END of the string, NOT in between the words!
 console.log(trimmedEmail); // keep in mind that in es6 also trimStart and trimEnd methods got introduced and can be used to either specifically trim empty spaces in the beginning or the end
-lowerEmail.trim
+
 // the above can be done in one line of code
 const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail) // same as trimmed email
