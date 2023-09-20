@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Modal window</title>
+    <style>
+      h1, #emptySpace{
+        color: white; display: flex; flex-direction:column; align-items: center; margin-top: 39vh;
+      }
+      textarea {
+        margin-top:50px;
+        margin-left: 82.5vh;
+        width: 350px;
+        height: 50px;font-size: x-large;
+      }
+      button {
+        width: 250px;height: 75px; border: outset 3px white; color: black;border-radius: 20px; margin-left: 89vh; font-size: x-large
+      }
+      button:hover {
+        color: white; background-color: black;
+      }
+      #emptySpace {
+        font-size: x-large;
+        height: 500px;
+        width: 600px;
+        margin-top: 50px;
+        /* text-align: center; */
+        background-color: black;
+        color: white;
+        border: 2px black;
+      }
+    </style>
   </head>
   <body style="background-color: black;">
-  <h1 style="color: white; display: flex; flex-direction:column; align-items: center; margin-top: 45vh;" id="mainHeading"> Welcome to Data Structures and Modern Operators in JavaScript! </h1></body>    
-    <script src="string3.js"></script>
+    <h1 id="mainHeading"> Welcome to Data Structures and Modern Operators in JavaScript! </h1>
+    <button id="Convert_underscore_case">Converse to Camel Case</button>
+    <textarea id="userData" placeholder="Insert underscore_case type sentence here!"></textarea>
+    <textarea disabled id="emptySpace"></textarea>
+  </body>    
+    <script src="coding_challenge4.js"></script>
   </body>
 </html>
